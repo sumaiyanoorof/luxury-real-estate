@@ -40,7 +40,7 @@ export default function ListingsPage({ onSelectProperty }: ListingsPageProps) {
 
     if (sort === 'price-asc') result.sort((a, b) => a.price - b.price)
     else if (sort === 'price-desc') result.sort((a, b) => b.price - a.price)
-    else if (sort === 'featured') result.sort((a, _b) => a.badge === 'Featured' ? -1 : 1)
+    else if (sort === 'featured') result.sort((a, b) => Number(b.badge === 'Featured') - Number(a.badge === 'Featured'))
 
     return result
   }, [search, filterType, filterStatus, filterBeds, filterMinPrice, filterMaxPrice, sort])
@@ -89,7 +89,7 @@ export default function ListingsPage({ onSelectProperty }: ListingsPageProps) {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '40px 40px', display: 'flex', gap: 32, alignItems: 'flex-start' }}>
+      <div className="listings-layout" style={{ maxWidth: 1400, margin: '0 auto', padding: '40px 40px', display: 'flex', gap: 32, alignItems: 'flex-start' }}>
         {/* Sidebar filters */}
         <aside style={{
           width: 260, flexShrink: 0, position: 'sticky', top: 90,
@@ -300,7 +300,7 @@ export default function ListingsPage({ onSelectProperty }: ListingsPageProps) {
               </p>
             </div>
           ) : view === 'grid' ? (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+            <div className="listings-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
               {filtered.map(p => (
                 <PropertyCard key={p.id} property={p} onClick={() => onSelectProperty(p.id)} />
               ))}

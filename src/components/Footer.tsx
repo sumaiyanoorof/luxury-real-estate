@@ -8,7 +8,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer style={{ background: 'var(--fg)', color: 'var(--bg)' }}>
       {/* Top CTA strip */}
-      <div style={{
+      <div className="footer-cta" style={{
         borderBottom: '1px solid rgba(255,255,255,0.08)',
         padding: '64px 40px',
         maxWidth: 1400,
@@ -58,7 +58,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
       {/* Main footer grid */}
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '56px 40px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: 48, flexWrap: 'wrap' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr', gap: 48, flexWrap: 'wrap' }}>
           {/* Brand */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>

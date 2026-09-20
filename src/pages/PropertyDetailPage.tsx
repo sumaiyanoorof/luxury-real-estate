@@ -48,7 +48,7 @@ export default function PropertyDetailPage({ propertyId, onNavigate, onSelectPro
 
       {/* Image Gallery */}
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '20px 40px 0' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '3fr 1fr', gridTemplateRows: '360px 180px', gap: 12 }}>
+        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: '3fr 1fr', gridTemplateRows: '360px 180px', gap: 12 }}>
           {/* Main image */}
           <div style={{ gridRow: '1 / 3', borderRadius: 20, overflow: 'hidden', background: 'var(--bg-secondary)', position: 'relative' }}>
             <img
@@ -106,7 +106,7 @@ export default function PropertyDetailPage({ propertyId, onNavigate, onSelectPro
 
       {/* Main content */}
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '40px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40, alignItems: 'flex-start' }}>
+        <div className="detail-layout" style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40, alignItems: 'flex-start' }}>
           {/* Left: Property details */}
           <div>
             {/* Header */}

@@ -122,7 +122,7 @@ function AboutContactPlaceholder({ page, onNavigate }: { page: Page; onNavigate:
             className="mt-16 p-10 rounded-3xl text-left"
             style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border)' }}
           >
-            <div className="grid gap-6" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+            <div className="contact-form-grid grid gap-6" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               {[
                 { label: 'Full Name', placeholder: 'Catherine Ashford', type: 'text' },
                 { label: 'Email Address', placeholder: 'catherine@example.com', type: 'email' },

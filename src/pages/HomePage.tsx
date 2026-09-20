@@ -108,7 +108,7 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
           </div>
 
           {/* Input row */}
-          <div style={{ display: 'flex', gap: 8, alignItems: 'stretch', flexWrap: 'wrap' }}>
+          <div className="hero-search-row" style={{ display: 'flex', gap: 8, alignItems: 'stretch', flexWrap: 'wrap' }}>
             <div style={{ flex: '2 1 180px', position: 'relative' }}>
               <div style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'rgba(255,255,255,0.5)' }}>
                 <SearchPinIcon />
@@ -308,7 +308,7 @@ function FeaturedPropertiesSection({ onSelectProperty, onNavigate }: { onSelectP
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="property-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {featured.map(property => (
             <PropertyCard
               key={property.id}
@@ -326,7 +326,7 @@ function StatsSection() {
   return (
     <section style={{ background: 'var(--bg-secondary)', padding: '80px 0' }}>
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, borderRadius: 20, overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, borderRadius: 20, overflow: 'hidden', border: '1px solid var(--border)' }}>
           {[
             { value: '12,847', suffix: '+', label: 'Verified Listings', desc: 'Every property authenticated by our expert team' },
             { value: '2,400', suffix: '+', label: 'Licensed Agents', desc: 'With proven track records in luxury markets' },
@@ -392,7 +392,7 @@ function WhyChooseUsSection() {
   return (
     <section style={{ background: 'var(--bg)', padding: '96px 0' }}>
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
+        <div className="why-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
           <div style={{ position: 'sticky', top: 100 }}>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent)', margin: '0 0 16px' }}>
               Why LuxEstate
@@ -417,7 +417,7 @@ function WhyChooseUsSection() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+          <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
             {features.map(f => (
               <div
                 key={f.title}
@@ -487,7 +487,7 @@ function FeaturedCitiesSection({ onNavigate }: { onNavigate: (p: Page) => void }
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '5fr 3fr 3fr', gridTemplateRows: 'auto auto', gap: 16 }}>
+        <div className="cities-grid" style={{ display: 'grid', gridTemplateColumns: '5fr 3fr 3fr', gridTemplateRows: 'auto auto', gap: 16 }}>
           {/* Large card */}
           <div
             onClick={() => onNavigate('listings')}
@@ -537,7 +537,7 @@ function AgentsSection() {
           </h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        <div className="agents-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {featuredAgents.map(agent => (
             <div
               key={agent.name}
@@ -629,7 +629,7 @@ function TestimonialsSection() {
   return (
     <section style={{ background: 'var(--fg)', padding: '96px 0' }}>
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'center' }}>
+        <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'center' }}>
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent)', margin: '0 0 16px' }}>
               Testimonials
@@ -746,7 +746,7 @@ function BlogSection() {
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {posts.map(post => (
             <article
               key={post.title}

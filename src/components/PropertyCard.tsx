@@ -22,7 +22,7 @@ export default function PropertyCard({ property, onClick, variant = 'default' }:
     return (
       <div
         onClick={onClick}
-        className="hover-lift"
+        className="property-horizontal hover-lift"
         style={{
           display: 'flex',
           background: 'var(--bg-elevated)',
